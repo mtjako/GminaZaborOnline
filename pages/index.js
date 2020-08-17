@@ -12,7 +12,8 @@ export async function getStaticProps(){
 
 export default function Home(props) {
   return (
-    <div className={styles.container}>
+    <>
+    <div className={styles.container} className="body">
       <Head>
         <title>Gmina Zabór Online</title>
         <link rel="icon" href="/favicon.ico" />
@@ -31,5 +32,9 @@ export default function Home(props) {
         </ul>
       </main>
     </div>
+    <style jsx>{`
+
+    `}</style>    
+    </>
   )
 }

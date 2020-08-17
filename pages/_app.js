@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }) {
       <Helmet>
         <html lang="pl"/>
         <meta name="description" content="Wiadomości z Gminy Zabór"/>
+        <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'/>
       </Helmet>
       <Navigation/>
       <Component {...pageProps} />

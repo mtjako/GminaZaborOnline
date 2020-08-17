@@ -29,7 +29,7 @@ export const Header = (props) => {
                     margin: 0 auto;
                     display: flex;
                     align-items: flex-end;
-                    padding: 32px 0;
+                    padding: 32px 20px;
                 }
                 &__overlay{
                     background: linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(0,0,0,1) 100%);
