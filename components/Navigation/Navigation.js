@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ModeSwitch } from '../ModeSwitch/ModeSwitch';
+import { Menu } from '../Menu/Menu';
 
 export const Navigation = (props) => {
 

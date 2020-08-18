@@ -23,8 +23,8 @@ export const PostTile = (props) => {
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
-                    width: 327px;
-                    height: 168px;
+                    width: 100%;
+                    height: ${props.size ? '168px' : '320px'};
                     border-radius: 8px;
                     filter: saturate(132%);
                     position: relative;
@@ -38,13 +38,17 @@ export const PostTile = (props) => {
                         padding: 32px;
                         display: flex;
                         flex-wrap: wrap;
-                        align-content: space-between;
+                        align-content: ${props.size ? 'space-between' : 'flex-end'};
                     }
                     &__title{
+                        width: 100%;
+                        max-height: 62px;
+                        overflow: hidden;
                         font-size: 24px;
                         font-weight: 600;
                     }
                     &__author{
+                        margin-top: ${props.size ? '0px' : '16px'};
                         display: flex;
                         &__img{
                             width: 36px;
