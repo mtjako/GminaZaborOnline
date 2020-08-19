@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { getPosts } from './api/ghost';
 import {PostTile} from '../components/PostTile/PostTile';
 import { Header } from '../components/Header/Header';
+import React, { useState, useEffect } from 'react';
 
 export async function getStaticProps(){
   const posts = await getPosts();

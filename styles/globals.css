@@ -19,3 +19,25 @@ a {
   margin: 0;
   padding: 0;
 }
+
+.Post__content ul {
+  padding-left: 20px;
+}
+.Post__content p {
+  margin-bottom: 24px;
+}
+.Post__content h3 {
+  padding-bottom: 16px;
+  border-bottom: 2px solid #999;
+  margin: 64px 0 32px;
+}
+
+body{
+  transition: .5s;
+  background-color: #fff;
+}
+
+body.dark{
+  background-color: #222;
+  color: #ddd;
+}

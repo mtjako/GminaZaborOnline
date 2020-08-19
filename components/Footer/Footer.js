@@ -25,7 +25,7 @@ export const Footer = (props) => {
         </footer>
         <style jsx>{`
             .Footer{
-                background-color: #222;
+                background-color: #191919;
                 width: 100%;
                 color: #fff;
                 padding: 32px 20px;
