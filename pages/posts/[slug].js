@@ -31,6 +31,7 @@ const Post = (props) => {
     </div>
     <style jsx>{`
       .Post{
+        min-height: calc(100vh - 167px);
         &__content{
           max-width:1000px;
           margin: 100px auto 0;

@@ -25,17 +25,17 @@ export const PostTile = (props) => {
                     background-repeat: no-repeat;
                     width: 100%;
                     height: ${props.size ? '168px' : '320px'};
-                    border-radius: 8px;
+                    border-radius: 6px;
                     filter: saturate(132%);
                     position: relative;
                     &__overlay{
                         position: absolute;
                         width: 100%;
                         height: 100%;
-                        border-radius: 8px;
+                        border-radius: 6px;
                         background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%);
                         color: #fff;
-                        padding: 32px;
+                        padding: 28px;
                         display: flex;
                         flex-wrap: wrap;
                         align-content: ${props.size ? 'space-between' : 'flex-end'};

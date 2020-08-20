@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+
+
 export const Menu = (props) => {
 
     return(
@@ -26,14 +28,14 @@ export const Menu = (props) => {
         <style jsx>{`
             .Menu{
                 color: #fff;
-                position: absolute;
+                position: fixed;
                 z-index: 9;
                 background-color: #000c;
-                width: 80%;
+                width: 100%;
                 height: calc(100% - 50px);
                 backdrop-filter: saturate(180%) blur(20px);
                 padding: 0 24px 24px;
-                display: flex;
+                display: ${props.open ? 'flex' : 'none'};
                 flex-direction: column;
                 justify-content: space-between;
                 &__header{

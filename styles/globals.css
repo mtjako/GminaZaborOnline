@@ -26,6 +26,16 @@ a {
 .Post__content p {
   margin-bottom: 24px;
 }
+.Post__content hr {
+  border: none;
+  width: 100%;
+  height: 2px;
+  background-color: #999;
+}
+.Post__content img {
+  width: 100%;
+  height: auto;
+}
 .Post__content h3 {
   padding-bottom: 16px;
   border-bottom: 2px solid #999;
@@ -33,11 +43,13 @@ a {
 }
 
 body{
-  transition: .5s;
+  transition: 1s;
   background-color: #fff;
+  color: #111;
 }
 
 body.dark{
+  transition: 1s;
   background-color: #222;
   color: #ddd;
 }

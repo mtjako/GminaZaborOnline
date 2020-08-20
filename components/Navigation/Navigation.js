@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { ModeSwitch } from '../ModeSwitch/ModeSwitch';
 import { Menu } from '../Menu/Menu';
-
+import React, { useState, useEffect } from 'react';
 export const Navigation = (props) => {
+    const [menu, setMenu] = useState(false);
 
     return(
         <>
@@ -16,12 +17,13 @@ export const Navigation = (props) => {
                     </Link>
                     <ModeSwitch/>
                 </div>
-                <div className="Navigation__menu">
+                <div onClick={()=>setMenu(!menu)} className="Navigation__menu">
                     <span></span>
                     <span></span>
                 </div>
             </div>
         </nav>
+        <Menu open={menu} />
         <style jsx>{`
             .Navigation{
                 position: sticky;
