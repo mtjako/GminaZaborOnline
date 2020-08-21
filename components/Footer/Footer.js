@@ -28,10 +28,10 @@ export const Footer = (props) => {
                 background-color: #191919;
                 width: 100%;
                 color: #fff;
-                padding: 32px 20px;
                 &__wrapper{
                     max-width: 1000px;
                     margin: 0 auto;
+                    padding: 32px 20px;
                     &__logo{
                         width: 100%;
                         display: flex;
@@ -40,7 +40,7 @@ export const Footer = (props) => {
                         border-bottom: 3px solid #777;
                     }
                     &__links{
-                        margin-left: 13px;
+
                         line-height: 50px;
                         font-weight: 100;
                         a{
@@ -49,7 +49,7 @@ export const Footer = (props) => {
                     }
                 }
                 &__logo{
-                    margin-left: 13px;
+
                     line-height: 50px;
                     font-weight: 600;
                     span{

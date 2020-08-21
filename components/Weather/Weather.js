@@ -1,6 +1,6 @@
 
 export const Weather = (props) => {
-    console.log("propsy: ",props.weather);
+    // console.log("propsy: ",props.weather);
     let weather = 'null';
     switch(props.weather.weather[0].main){
         case "Clouds": weather = "Chmury"; break;
@@ -19,7 +19,7 @@ export const Weather = (props) => {
             <p className="Weather__temperature" >{parseInt(props.weather.main.temp)}°</p> 
             <div className="Weather__wrapper">
                 <p className="Weather__type">{weather}</p>
-                <img className="Weather__img" src={'/weather/' + props.weather.weather[0].icon + '.svg'}/>
+                <img alt="weatherIcon" className="Weather__img" src={'/weather/' + props.weather.weather[0].icon + '.svg'}/>
             </div>
         </div>
         <style jsx>{`
