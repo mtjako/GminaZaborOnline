@@ -1,8 +1,8 @@
 import GhostContentAPI from "@tryghost/content-api";
 
 const api = new GhostContentAPI({
-  url: 'https://droszkow.net',
-  key: '4a74a6468c01021d42de77454e',
+  url: 'http://165.232.69.88',
+  key: '39bbd0c7b03ca0f198ffe1e965',
   version: "v3"
 });
 
