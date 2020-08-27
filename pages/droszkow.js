@@ -6,14 +6,13 @@ import { Header } from '../components/Header/Header';
 import { PostsList } from '../components/PostsList/PostsList';
 import { Contact } from '../components/Contact/Contact';
 import { Church } from '../components/Church/Church';
-import { TownHall } from '../components/TownHall/TownHall';
 
 export async function getStaticProps(){
   const posts = await getPosts();
   return {props: {posts: posts} }
 }
 
-export default function Home(props) {
+export default function Droszkow(props) {
   const [weather, setWeather] = useState({"coord":{"lon":15.51,"lat":51.94},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":280.62,"feels_like":28.85,"temp_min":26,"temp_max":30,"pressure":1012,"humidity":41},"visibility":10000,"wind":{"speed":1.5,"deg":0},"clouds":{"all":82},"dt":1597922403,"sys":{"type":1,"id":1714,"country":"PL","sunrise":1597895458,"sunset":1597947117},"timezone":7200,"id":3080165,"name":"Zielona Góra","cod":200});
 
   useEffect(() => {
@@ -31,10 +30,9 @@ export default function Home(props) {
         <title>Gmina Zabór Online</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header title="Aktualności" subtitle="Gmina Zabór" img="/hero.jpeg"/>
+      <Header title="Aktualności" subtitle="Droszków" img="/hero.jpeg"/>
       <main className={styles.main}>
-        <PostsList posts={props.posts} weather={weather} town="" amount={7}/>
-        <TownHall/>
+        <PostsList posts={props.posts} weather={weather} town="Droszków" amount={7}/>
         <Church/>
         <Contact/>
       </main>
