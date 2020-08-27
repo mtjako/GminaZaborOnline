@@ -12,7 +12,7 @@ export const Navigation = (props) => {
                 <div className="Navigation__wrapper__logo">
                     <Link href="/">
                         <a>
-                            <p className="Navigation__logo"><span>G</span>mina Zabór Online</p>
+                            <p className="Navigation__logo"><span>G</span>mina Zabór INFO</p>
                         </a>
                     </Link>
                     <ModeSwitch/>

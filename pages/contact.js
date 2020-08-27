@@ -27,7 +27,6 @@ export default function Droszkow(props) {
     <>
     <div className={styles.container} className="body">
       <Head>
-        <title>Gmina Zabór Online</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header title="Kontakt" subtitle="Gmina Zabór" img="/hero.jpeg"/>
