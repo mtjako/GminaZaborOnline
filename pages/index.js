@@ -6,7 +6,7 @@ import { Header } from '../components/Header/Header';
 import { PostsList } from '../components/PostsList/PostsList';
 import { Contact } from '../components/Contact/Contact';
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
   const posts = await getPosts();
   return {props: {posts: posts} }
 }
