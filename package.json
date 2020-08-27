@@ -11,7 +11,6 @@
     "@tryghost/content-api": "^1.4.4",
     "form-serializer": "^2.5.0",
     "image-trace-loader": "^1.0.2",
-    "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^8.0.0",
