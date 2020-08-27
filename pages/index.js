@@ -5,8 +5,6 @@ import { getPosts } from './api/ghost';
 import { Header } from '../components/Header/Header';
 import { PostsList } from '../components/PostsList/PostsList';
 import { Contact } from '../components/Contact/Contact';
-import { Church } from '../components/Church/Church';
-import { TownHall } from '../components/TownHall/TownHall';
 
 export async function getStaticProps(){
   const posts = await getPosts();
@@ -24,6 +22,7 @@ export default function Home(props) {
       });
   }, []);
 
+
   return (
     <>
     <div className={styles.container} className="body">
@@ -34,8 +33,6 @@ export default function Home(props) {
       <Header title="Aktualności" subtitle="Gmina Zabór" img="/hero.jpeg"/>
       <main className={styles.main}>
         <PostsList posts={props.posts} weather={weather} town="" amount={7}/>
-        <TownHall/>
-        <Church/>
         <Contact/>
       </main>
     </div>
