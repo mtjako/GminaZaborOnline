@@ -4,7 +4,6 @@ import styles from '../styles/Home.module.css';
 import { getPosts } from './api/ghost';
 import { Header } from '../components/Header/Header';
 import { PostsList } from '../components/PostsList/PostsList';
-import { Contact } from '../components/Contact/Contact';
 import { Church } from '../components/Church/Church';
 
 export async function getStaticProps(){
