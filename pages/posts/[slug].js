@@ -3,20 +3,18 @@ import { getPosts } from '../api/ghost';
 import { Header } from '../../components/Header/Header';
 import Head from 'next/head';
 
-export async function getStaticPaths(){
+export async function getServerSideProps(params){
     const posts = await getPosts();
     const paths = posts.map((post)=> ({
         params: {
             slug: post.slug,
         }
     }))
-    return {paths, fallback: false}
+    const post = await getSinglePost(params.params.slug);
+    return {paths, fallback: false},{props: {post: post} };
   }
 
-export async function getStaticProps(params){
-    const post = await getSinglePost(params.params.slug);
-    return {props: {post: post} }
-}
+
 
 const Post = (props) => {
   return (

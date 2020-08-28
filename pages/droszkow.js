@@ -7,7 +7,7 @@ import { PostsList } from '../components/PostsList/PostsList';
 import { Contact } from '../components/Contact/Contact';
 import { Church } from '../components/Church/Church';
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
   const posts = await getPosts();
   return {props: {posts: posts} }
 }
