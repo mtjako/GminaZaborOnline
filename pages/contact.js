@@ -79,7 +79,7 @@ export default function Contact(props) {
                 color: inherit;
                 border: none;
                 padding: 10px 16px;
-                background-color: #f2f2f2;
+                background-color: #0002;
                 border-radius: 8px;
                 resize: none;
             }

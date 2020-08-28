@@ -20,7 +20,7 @@ a {
   padding: 0;
 }
 
-.Post__content ul {
+.Post__content ul, .Post__content ol{
   padding-left: 20px;
 }
 .Post__content p {

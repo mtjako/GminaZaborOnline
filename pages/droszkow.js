@@ -6,6 +6,7 @@ import { Header } from '../components/Header/Header';
 import { PostsList } from '../components/PostsList/PostsList';
 import { Contact } from '../components/Contact/Contact';
 import { Church } from '../components/Church/Church';
+import { TownHall } from '../components/TownHall/TownHall';
 
 export async function getServerSideProps(){
   const posts = await getPosts();
@@ -29,9 +30,10 @@ export default function Droszkow(props) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header title="Aktualności" subtitle="Droszków" img="/hero.jpeg"/>
+      <Header title="Aktualności" subtitle="Droszków" img="/hero-droszkow.jpeg"/>
       <main className={styles.main}>
         <PostsList posts={props.posts} weather={weather} town="Droszków" amount={7}/>
+        <TownHall/>
         <Church/>
         <Contact/>
       </main>

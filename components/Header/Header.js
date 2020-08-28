@@ -32,7 +32,7 @@ export const Header = (props) => {
                     padding: 32px 20px;
                 }
                 &__overlay{
-                    background: linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(0,0,0,1) 100%);
+                    background: linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.8) 100%);
                 }
                 &__box{
 

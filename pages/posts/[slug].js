@@ -14,8 +14,6 @@ export async function getServerSideProps(params){
     return {paths, fallback: false},{props: {post: post} };
   }
 
-
-
 const Post = (props) => {
   return (
     <>
@@ -32,7 +30,8 @@ const Post = (props) => {
         min-height: calc(100vh - 167px);
         &__content{
           max-width:1000px;
-          margin: 100px auto 0;
+          padding: 32px 20px;
+          margin: 0 auto;
           font-size: 20px;
           line-height: 200%;
           p{
