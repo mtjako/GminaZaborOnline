@@ -1,8 +1,8 @@
 import GhostContentAPI from "@tryghost/content-api";
 
 const api = new GhostContentAPI({
-  url: 'http://165.232.69.88',
-  key: '39bbd0c7b03ca0f198ffe1e965',
+  url: 'https://admin.gminazabor.info',
+  key: '9a01239ece054001a2f53e8ee3',
   version: "v3"
 });
 
