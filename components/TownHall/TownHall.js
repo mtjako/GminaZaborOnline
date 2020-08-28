@@ -57,10 +57,14 @@ export const TownHall = (props) => {
                 }
                 &__description{
                     display: flex;
+                    flex-wrap: wrap;
                     align-items: center;
                 }
                 &__text{
                     width: calc((100% / 3) * 1);
+                    @media(max-width: 700px){
+                        width: 100%;
+                    }
                     h3{
                         margin-bottom: 8px;
                     }
@@ -73,7 +77,11 @@ export const TownHall = (props) => {
                 &__table{
                     margin-left: 32px;
                     border-collapse: collapse;
-                    width: calc((100% / 3) * 2);
+                    width: calc(((100% / 3) * 2) - 32px);
+                    @media(max-width: 700px){
+                        width: 100%;
+                        margin-left: 0;
+                    }
                     text-align: center;
                     th{
                         padding: 10px;
