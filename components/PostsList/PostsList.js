@@ -1,24 +1,32 @@
 import { PostTile } from "../PostTile/PostTile";
 import { Weather } from "../Weather/Weather";
 import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
 
 export const PostsList = (props) => {
+    const [goto, setGoto] = useState([]);
+    useEffect(() => {
+        props.posts.map(post =>{
+            post.tags.forEach(tag =>{
+                if(tag.name.includes(props.town)){
+                    setGoto(goto => [...goto,post]);
+                }
+            })
+        })
+    }, []);
     let counter = 0;
     return(
         <>
         <div className="PostsList">
             <ul>
-            {props.posts.map((post,index) => {
-                let town = false;
-                post.tags.forEach(element => {if(element.name.includes(props.town)){town=true}});
-
-                if(index<props.amount && town == true){ ++counter; return(  
-                    <li key={post.id}>
-                        <Link href={`posts/[slug]`} as={`posts/${post.slug}`}>
-                            <a><PostTile post={post} size={counter!=1 ? true : false}/></a> 
-                        </Link>
-                    </li>
-                )}
+            {goto.map((post,index)=>{
+            return index<7 ?(
+                <li key={post.id}>
+                    <Link href={`posts/[slug]`} as={`posts/${post.slug}`}>
+                        <a><PostTile post={post} size={index!=0 ? true : false}/></a> 
+                    </Link>
+                </li>
+            ): null;
             })}
             <li key="weather" id="weather"><Weather weather={props.weather}/></li>
             </ul>

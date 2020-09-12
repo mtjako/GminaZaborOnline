@@ -1,25 +1,26 @@
 import { SectionHeader } from "../SectionHeader/SectionHeader";
+import data from "../../public/data"
 
 export const Contact = (props) => {
+    let town = {};
+    data.forEach(element => {
+        if(element.name == props.town){
+            town = element;
+        }
+    });
     return(
         <>
         <div className="Contact">
           <SectionHeader title="Kontakt"/>
           <div className="Contact__description">
-              <b>Administrator Strony</b>
-              <p>Mateusz Jakowlew</p>
-              <br/>
-              <b>Sołtys Droszkowa</b>
-              <p>Tomasz Kunc</p>
+              <b>Sołtys</b>
+              <p>{town.soltys}</p>
               <br/>
               <b>Rada Sołecka</b>
-              <p>Agnieszka Georgiczuk</p>
-              <p>Aneta Krieger</p>
-              <p>Bogusława Jackowska</p>
-              <p>Ewa Kostrzewska</p>
-              <p>Jakub Czwojda</p>
-              <p>Jarosław Śliwiński</p>
-              <p>Mateusz Jakowlew</p>
+              {town.rada.map((name,index)=><p key={index}>{name}</p>)}
+              <br/>
+              <b>Administrator Strony</b>
+              <p>{data[0].name}</p>
           </div>  
           <img alt="team" className="Contact__img" src="/contact.svg"/>
         </div>

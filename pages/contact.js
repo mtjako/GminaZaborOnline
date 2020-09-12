@@ -12,7 +12,6 @@ export async function getStaticProps(){
 }
 
 export default function Contact(props) {
-
   return (
     <>
     <div className={styles.container} className="body">

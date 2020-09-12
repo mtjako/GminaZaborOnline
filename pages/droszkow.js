@@ -5,8 +5,8 @@ import { getPosts } from './api/ghost';
 import { Header } from '../components/Header/Header';
 import { PostsList } from '../components/PostsList/PostsList';
 import { Contact } from '../components/Contact/Contact';
-import { Church } from '../components/Church/Church';
-import { TownHall } from '../components/TownHall/TownHall';
+import {Church} from '../components/Church/Church';
+import {TownHall} from '../components/TownHall/TownHall'
 
 export async function getServerSideProps(){
   const posts = await getPosts();
@@ -14,8 +14,8 @@ export async function getServerSideProps(){
 }
 
 export default function Droszkow(props) {
-  const [weather, setWeather] = useState({"coord":{"lon":15.51,"lat":51.94},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":280.62,"feels_like":28.85,"temp_min":26,"temp_max":30,"pressure":1012,"humidity":41},"visibility":10000,"wind":{"speed":1.5,"deg":0},"clouds":{"all":82},"dt":1597922403,"sys":{"type":1,"id":1714,"country":"PL","sunrise":1597895458,"sunset":1597947117},"timezone":7200,"id":3080165,"name":"Zielona Góra","cod":200});
-
+  const [weather, setWeather] = useState({"coord":{"lon":15.51,"lat":51.94},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":0,"feels_like":0,"temp_min":0,"temp_max":0,"pressure":1012,"humidity":41},"visibility":10000,"wind":{"speed":1.5,"deg":0},"clouds":{"all":82},"dt":1597922403,"sys":{"type":1,"id":1714,"country":"PL","sunrise":1597895458,"sunset":1597947117},"timezone":7200,"id":3080165,"name":"Zielona Góra","cod":200});
+  const town = "Droszków"
   useEffect(() => {
       fetch('https://api.openweathermap.org/data/2.5/weather?id=3080165&appid=e186820a755e6badc03e15fe1819552c&units=metric').then(res => {
           return res.json();
@@ -30,12 +30,12 @@ export default function Droszkow(props) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header title="Aktualności" subtitle="Droszków" img="/hero-droszkow.jpeg"/>
+      <Header title="Aktualności" subtitle={town} img={`./hero/${town}.jpg`}/>
       <main className={styles.main}>
-        <PostsList posts={props.posts} weather={weather} town="Droszków" amount={7}/>
-        <TownHall/>
+        <PostsList posts={props.posts} weather={weather} town={town} amount={7}/>
         <Church/>
-        <Contact/>
+        <TownHall/>
+        <Contact town={town}/>
       </main>
     </div>
     <style jsx>{`

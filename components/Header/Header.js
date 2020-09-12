@@ -18,7 +18,7 @@ export const Header = (props) => {
                 margin-top: -50px;
                 background-color: #333;
                 background-image: url('${props.img}');
-                background-position: center;
+                background-position: center 80%;
                 background-size: cover;
                 width: 100%;
                 height: 400px;
@@ -32,7 +32,7 @@ export const Header = (props) => {
                     padding: 32px 20px;
                 }
                 &__overlay{
-                    background: linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.8) 100%);
+                    background: linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.75) 100%);
                 }
                 &__box{
 

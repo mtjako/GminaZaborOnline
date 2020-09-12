@@ -32,7 +32,7 @@ export default function Home(props) {
       <Header title="Aktualności" subtitle="Gmina Zabór" img="/hero.jpeg"/>
       <main className={styles.main}>
         <PostsList posts={props.posts} weather={weather} town="" amount={7}/>
-        <Contact/>
+
       </main>
     </div>
     <style jsx>{`
