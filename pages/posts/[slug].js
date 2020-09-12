@@ -20,6 +20,11 @@ const Post = (props) => {
     <Head>
       <title>{props.post.title}</title>
       <link rel="icon" href="/favicon.ico" />
+      <meta property="og:url" content={`https://gminazabor.info/posts/${props.post.slug}`} />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content={props.post.title} />
+      {/* <meta property="og:description" content="How much does culture influence creative thinking?" /> */}
+      <meta property="og:image" content={props.post.feature_image} />
     </Head>
     <div className="Post">
       <Header title={props.post.title} subtitle="Droszków" img={props.post.feature_image}/>
