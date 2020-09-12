@@ -21,7 +21,8 @@ export default function Home(props) {
           setWeather(res);
       });
   }, []);
-
+  const towns = ['Czarna','Dąbrowa','Droszków','Łaz','Milsko','Przytok','Tarnawa','Zabór'];
+  const random = Math.floor(Math.random() * 8) + 1;
 
   return (
     <>
@@ -33,10 +34,9 @@ export default function Home(props) {
         <meta property="og:title" content="Gmina Zabór Info" />
         <meta property="og:image" content={`https://gminazabor.info/hero/Droszków.jpg`} />
       </Head>
-      <Header title="Aktualności" subtitle="Gmina Zabór" img="/hero.jpeg"/>
+      <Header title="Aktualności" subtitle="Gmina Zabór" img={`/hero/${towns[random-1]}.jpg`}/>
       <main className={styles.main}>
         <PostsList posts={props.posts} weather={weather} town="" amount={7}/>
-
       </main>
     </div>
     <style jsx>{`
