@@ -28,6 +28,10 @@ export default function Home(props) {
     <div className={styles.container} className="body">
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:url" content={`https://gminazabor.info/`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Gmina Zabór Info" />
+        <meta property="og:image" content={`https://gminazabor.info/hero/Droszków.jpg`} />
       </Head>
       <Header title="Aktualności" subtitle="Gmina Zabór" img="/hero.jpeg"/>
       <main className={styles.main}>

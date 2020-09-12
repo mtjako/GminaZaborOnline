@@ -23,7 +23,6 @@ const Post = (props) => {
       <meta property="og:url" content={`https://gminazabor.info/posts/${props.post.slug}`} />
       <meta property="og:type" content="article" />
       <meta property="og:title" content={props.post.title} />
-      {/* <meta property="og:description" content="How much does culture influence creative thinking?" /> */}
       <meta property="og:image" content={props.post.feature_image} />
     </Head>
     <div className="Post">
