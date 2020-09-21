@@ -33,6 +33,7 @@ export default[
            "Ewa Kostrzewska",
            "Jakub Czwojda",
            "Jarosław Śliwiński",
+           "Mariusz Woźniak",
            "Mateusz Jakowlew"
         ]
      },
