@@ -17,7 +17,7 @@ export const Navigation = (props) => {
                     </Link>
                     <ModeSwitch/>
                 </div>
-                <div onClick={()=>setClose(!close)} className="Navigation__menu">
+                <div className="HamburgerBtn Navigation__menu" onClick={()=>setClose(!close)}>
                     <span></span>
                     <span></span>
                 </div>
@@ -25,6 +25,11 @@ export const Navigation = (props) => {
         </nav>
         <Menu close={close} setClose={setClose} />
         <style jsx>{`
+            .HamburgerBtn{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
             .Navigation{
                 position: sticky;
                 top: 0;
@@ -44,6 +49,11 @@ export const Navigation = (props) => {
                     &__logo{
                         display: flex;
                         align-items: center;
+                        transition: .5s;
+                        margin-left: 0px;
+                        @media(max-width: 1080px){
+                            margin-left: 40px;
+                        }
                     }
                 }
                 &__logo{
