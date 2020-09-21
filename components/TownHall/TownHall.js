@@ -6,7 +6,7 @@ export const TownHall = (props) => {
         <>
         <div className="TownHall">
           <SectionHeader title="Świetlica Wiejska"/>
-          <img className="TownHall__img" src="/droszkow_swietlica.png"/>
+          <img className="TownHall__img" alt="Świetlica Wiejska" src="/droszkow_swietlica.png"/>
           <div className="TownHall__description">
               <div className="TownHall__text">
                   <h3>Wynajem Świetlicy</h3>
