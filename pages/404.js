@@ -2,6 +2,9 @@
 export default (props) =>{
 
     return(<>
+        <Head>
+            <link rel="icon" href="/favicon.svg" />
+        </Head>
         <div className="Page404"><img src="/404.svg"/></div>
         <style jsx>{`
             .Page404{

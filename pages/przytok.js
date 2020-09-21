@@ -26,7 +26,7 @@ export default function Przytok(props) {
     <>
     <div className={styles.container} className="body">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
         <meta property="og:url" content={`https://gminazabor.info/`} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Gmina Zabór Info" />
