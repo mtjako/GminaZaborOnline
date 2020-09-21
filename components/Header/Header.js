@@ -1,6 +1,5 @@
 
 export const Header = (props) => {
-    console.log(props.img);
     return(
         <>
         <footer className="Header">
