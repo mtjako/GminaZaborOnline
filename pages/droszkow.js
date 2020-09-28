@@ -7,7 +7,7 @@ import { PostsList } from '../components/PostsList/PostsList';
 import { Contact } from '../components/Contact/Contact';
 import {Church} from '../components/Church/Church';
 import {TownHall} from '../components/TownHall/TownHall'
-import { MeetingInfo } from '../components/MeetingInfo/MeetingInfo';
+import {Bus} from '../components/Bus/Bus';
 
 export async function getServerSideProps(){
   const posts = await getPosts();

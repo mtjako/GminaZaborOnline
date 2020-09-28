@@ -19,7 +19,7 @@ const Post = (props) => {
     <>
     <Head>
       <title>{props.post.title}</title>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.svg" />
       <meta property="og:url" content={`https://gminazabor.info/posts/${props.post.slug}`} />
       <meta property="og:type" content="article" />
       <meta property="og:title" content={props.post.title} />

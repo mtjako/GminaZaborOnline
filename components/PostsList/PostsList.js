@@ -22,7 +22,7 @@ export const PostsList = (props) => {
             {goto.map((post,index)=>{
             return index<7 ?(
                 <li key={post.id}>
-                    <Link href={`posts/[slug]`} as={`posts/${post.slug}`}>
+                    <Link href={`posts/[slug]`} as={`posts/${post.slug}`} prefetch={true}>
                         <a><PostTile post={post} size={index!=0 ? true : false}/></a> 
                     </Link>
                 </li>

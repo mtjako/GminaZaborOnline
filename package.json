@@ -25,6 +25,7 @@
     "react-helmet": "^6.1.0",
     "responsive-loader": "^2.0.2",
     "sass": "^1.26.10",
+    "styled-components": "^5.2.0",
     "svg-sprite-loader": "^5.0.0",
     "vercel": "^20.0.0",
     "webp-loader": "^0.6.0",
