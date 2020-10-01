@@ -3,9 +3,9 @@ import { Navigation } from '../components/Navigation/Navigation';
 import { Footer } from '../components/Footer/Footer';
 import {Helmet} from "react-helmet";
 import Head from 'next/head';
-import { useEffect } from 'react';
-import Router from 'next/router';
-import * as gtag from '../lib/gtag';
+import { useEffect } from 'react'
+import Router from 'next/router'
+import * as gtag from '../lib/gtag'
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

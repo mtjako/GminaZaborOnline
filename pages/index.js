@@ -4,7 +4,6 @@ import styles from '../styles/Home.module.css';
 import { getPosts } from './api/ghost';
 import { Header } from '../components/Header/Header';
 import { PostsList } from '../components/PostsList/PostsList';
-import { Contact } from '../components/Contact/Contact';
 
 export async function getServerSideProps(){
   const posts = await getPosts();
@@ -33,17 +32,6 @@ export default function Home(props) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Gmina Zabór Info" />
         <meta property="og:image" content={`https://gminazabor.info/hero/Droszków.jpg`} />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141206406-4"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-141206406-4');
-            `
-          }}
-        />
       </Head>
       <Header title="Aktualności" subtitle="Gmina Zabór" img={`/hero/${towns[random-1]}.jpg`}/>
       <main className={styles.main}>
