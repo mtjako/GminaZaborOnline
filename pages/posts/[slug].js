@@ -38,9 +38,6 @@ const Post = (props) => {
           margin: 0 auto;
           font-size: 20px;
           line-height: 200%;
-          p{
-            color: red;
-          }
         }
       }
     `}</style>    
