@@ -17,6 +17,16 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Strona informacyjna Gmina Zabór Info to codzinne źródło informacji z Gminy Zabór. Najnowsze wiadomości ze wszystkich sołectw naszej gminy."/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </Head>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141206406-4"></script>
+      <script dangerouslySetInnerHTML={
+      { __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-141206406-4');
+        `}
+      }></script>
       <Navigation/>
       <Component {...pageProps} />
       <Footer/>
