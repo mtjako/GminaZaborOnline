@@ -5,7 +5,7 @@ export const MeetingInfo = () => {
         <>
         <div className="alert">
             <img src="/megaphone.svg"/>
-            <p>Zebranie Wiejskie 21.09.2020 / 18:00</p>
+            <p>Teatr na Kobelce / DZISIAJ 16:00</p>
         </div>
         <style jsx>{`
             @keyframes flashing{
