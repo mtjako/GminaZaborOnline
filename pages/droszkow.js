@@ -38,7 +38,6 @@ export default function Droszkow(props) {
       </Head>
       <Header title="Aktualności" subtitle={town} img={`./hero/${town}.jpg`}/>
       <main className={styles.main}>
-        <MeetingInfo/>
         <PostsList posts={props.posts} weather={weather} town={town} amount={7}/>
         <Church/>
         <TownHall/>
