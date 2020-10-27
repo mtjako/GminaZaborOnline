@@ -50,9 +50,11 @@ export const TownHall = (props) => {
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
+                align-items: flex-start;
                 margin-bottom: 32px;
                 &__img{
                     width: 100%;
+                    height: auto;
                     margin-bottom: 24px;
                 }
                 &__description{
