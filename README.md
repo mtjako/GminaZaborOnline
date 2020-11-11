@@ -1,1 +1,1 @@
-# GminaZaborOnline
+# GminaZaborINFO
