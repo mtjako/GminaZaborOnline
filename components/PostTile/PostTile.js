@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export const PostTile = ({post,size}) => {
     const date = post.date.split('T')[0];
     const thumbnail = post.featuredImage != null ? post.featuredImage.node.srcSet.split(', ')[3].split(' ')[0] : "https://images.pexels.com/photos/3657429/pexels-photo-3657429.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
@@ -7,7 +9,9 @@ export const PostTile = ({post,size}) => {
             <div className="PostTitle__overlay">
                 <h2 className="PostTitle__title">{post.title}</h2>
                 <div className="PostTitle__author">
-                    <img className="PostTitle__author__img" src={post.author.node.avatar.url} alt="avatar"/>
+                    <div className="PostTitle__author__img">
+                        <Image src={post.author.node.avatar.url} alt="avatar" width={36} height={36}/>
+                    </div>
                     <div className="PostTitle__author__meta">
                         <p className="PostTitle__author__meta__name">{post.author.node.name}</p>
                         <p className="PostTitle__author__meta__date">{date}</p>
@@ -53,6 +57,7 @@ export const PostTile = ({post,size}) => {
                             height: 36px;
                             border-radius: 50%;
                             margin-right: 8px;
+                            overflow: hidden;
                         }
                         &__meta{
                             font-size: 14px;

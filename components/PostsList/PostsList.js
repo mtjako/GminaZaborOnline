@@ -1,5 +1,5 @@
 import { PostTile } from "../PostTile/PostTile";
-import { Weather } from "../Weather/Weather";
+import { Weather } from "../Weather";
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
@@ -12,7 +12,7 @@ export const PostsList = (props) => {
             {props.posts.map((post,index)=>{
             return index<7 ?(
                 <li key={post.databaseId}>
-                    <Link href={`post/[slug]`} as={`post/${post.slug}`} prefetch={true}>
+                    <Link href={`post/[slug]`} as={`post/${post.slug}`}>
                         <a><PostTile post={post} size={index!=0 ? true : false}/></a> 
                     </Link>
                 </li>

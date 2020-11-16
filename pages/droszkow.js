@@ -4,10 +4,10 @@ import styles from '../styles/Home.module.css';
 import { Header } from '../components/Header/Header';
 import { PostsList } from '../components/PostsList/PostsList';
 import { Contact } from '../components/Contact/Contact';
-import {Church} from '../components/Church/Church';
-import {TownHall} from '../components/TownHall/TownHall'
+import {Church} from '../components/Church';
+import {TownHall} from '../components/TownHall'
 import {Bus} from '../components/Bus/Bus';
-import { MeetingInfo } from '../components/MeetingInfo/MeetingInfo';
+import { MeetingInfo } from '../components/MeetingInfo';
 import { getAllPosts } from "../graphql/client";
 
 export async function getServerSideProps(context) {

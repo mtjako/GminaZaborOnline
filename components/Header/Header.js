@@ -50,7 +50,7 @@ export const Header = (props) => {
                   margin-right: 10px;
                   font-weight:bold;
                   text-transform: uppercase;
-                  background-color: #728E27;
+                  background-color: #4F5F1B;
                   color: #fff;
               }
           }

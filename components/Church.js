@@ -1,4 +1,4 @@
-import { SectionHeader } from "../SectionHeader/SectionHeader";
+import { SectionHeader } from "./SectionHeader/SectionHeader";
 
 
 export const Church = (props) => {

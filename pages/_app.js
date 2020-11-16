@@ -1,10 +1,11 @@
 import '../styles/globals.css'
 import { Navigation } from '../components/Navigation/Navigation';
-import { Footer } from '../components/Footer/Footer';
+import { Footer } from '../components/Footer';
 import {Helmet} from "react-helmet";
 import Head from 'next/head';
 import {ApolloProvider} from '@apollo/client';
 import {client} from '../graphql/client';
+
 
 function MyApp({ Component, pageProps }) {
   return (

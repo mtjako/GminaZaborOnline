@@ -1,3 +1,4 @@
+import Image from 'next/image'
 
 export const Weather = (props) => {
     // console.log("propsy: ",props.weather);
@@ -19,7 +20,7 @@ export const Weather = (props) => {
             <p className="Weather__temperature" >{parseInt(props.weather.main.temp)}°</p> 
             <div className="Weather__wrapper">
                 <p className="Weather__type">{weather}</p>
-                <img alt="weatherIcon" className="Weather__img" src={'/weather/' + props.weather.weather[0].icon + '.svg'}/>
+                <Image width={80} height={80} alt="weatherIcon" className="Weather__img" src={'/weather/' + props.weather.weather[0].icon + '.svg'}/>
             </div>
         </div>
         <style jsx>{`
