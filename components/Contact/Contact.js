@@ -1,5 +1,6 @@
 import { SectionHeader } from "../SectionHeader/SectionHeader";
 import data from "../../public/data"
+import Image from 'next/image'
 
 export const Contact = (props) => {
     let town = {};
@@ -22,7 +23,7 @@ export const Contact = (props) => {
               <b>Administrator Strony</b>
               <p>{data[0].name}</p>
           </div>  
-          <img alt="team" className="Contact__img" src="/contact.svg"/>
+          <Image quality={50} width={300} height={300} alt="team" className="Contact__img" src="/contact.svg"/>
         </div>
         <style jsx>{`
             .Contact{

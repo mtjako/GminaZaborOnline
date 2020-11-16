@@ -1,12 +1,12 @@
 import { SectionHeader } from "./SectionHeader/SectionHeader";
-
+import Image from 'next/image'
 
 export const Church = (props) => {
     return(
         <>
         <div className="Church">
           <SectionHeader title="Kościół"/>
-          <img alt="church" className="Church__img" src="/church.svg"/>
+          <Image quality={50} width={225} height={225} alt="church" className="Church__img" src="/church.svg"/>
             <div className="Church__schedule">
               <h3>Msze Święte</h3>
               <b>Niedziela</b>

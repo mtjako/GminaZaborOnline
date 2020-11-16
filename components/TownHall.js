@@ -1,12 +1,12 @@
 import { SectionHeader } from "./SectionHeader/SectionHeader";
-
+import Image from 'next/image'
 
 export const TownHall = (props) => {
     return(
         <>
         <div className="TownHall">
           <SectionHeader title="Świetlica Wiejska"/>
-          <img className="TownHall__img" alt="Świetlica Wiejska" src="/droszkow_swietlica.png"/>
+          <Image quality={50} width={960} height={280} className="TownHall__img" alt="Świetlica Wiejska" src="/droszkow_swietlica.png"/>
           <div className="TownHall__description">
               <div className="TownHall__text">
                   <h3>Wynajem Świetlicy</h3>

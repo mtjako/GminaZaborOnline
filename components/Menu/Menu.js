@@ -7,14 +7,14 @@ export const Menu = ({close,setClose}) => {
             <div className="Menu__top">
                 <p className="Menu__header"><span>W</span>ybierz Sołectwo</p>
                 <ul className="Menu__list">
-                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><Link href={`/czarna`}><a>Czarna</a></Link></li>
-                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><Link href={`/dabrowa`}><a>Dąbrowa</a></Link></li>
-                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><Link href={`/droszkow`}><a>Droszków</a></Link></li>
-                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><Link href={`/laz`}><a>Łaz</a></Link></li>
-                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><Link href={`/milsko`}><a>Milsko</a></Link></li>
-                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><Link href={`/przytok`}><a>Przytok</a></Link></li>
-                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><Link href={`/tarnawa`}><a>Tarnawa</a></Link></li>
-                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><Link href={`/zabor`}><a>Zabór</a></Link></li>
+                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><a href={`/czarna`}>Czarna</a></li>
+                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><a href={`/dabrowa`}>Dąbrowa</a></li>
+                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><a href={`/droszkow`}>Droszków</a></li>
+                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><a href={`/laz`}>Łaz</a></li>
+                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><a href={`/milsko`}>Milsko</a></li>
+                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><a href={`/przytok`}>Przytok</a></li>
+                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><a href={`/tarnawa`}>Tarnawa</a></li>
+                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><a href={`/zabor`}>Zabór</a></li>
                 </ul>
             </div>
             <ul className="Menu__list">
