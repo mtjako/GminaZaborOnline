@@ -37,7 +37,7 @@ query getAllPosts($town: String!) {
       databaseId
       featuredImage {
         node {
-          srcSet(size: POST_THUMBNAIL)
+          srcSet
         }
       }
       author {
