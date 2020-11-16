@@ -3,26 +3,16 @@ import { Weather } from "../Weather/Weather";
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
+
 export const PostsList = (props) => {
-    const [goto, setGoto] = useState([]);
-    useEffect(() => {
-        props.posts.map(post =>{
-            post.tags.forEach(tag =>{
-                if(tag.name.includes(props.town)){
-                    setGoto(goto => [...goto,post]);
-                }
-            })
-        })
-    }, []);
-    let counter = 0;
     return(
         <>
         <div className="PostsList">
             <ul>
-            {goto.map((post,index)=>{
+            {props.posts.map((post,index)=>{
             return index<7 ?(
-                <li key={post.id}>
-                    <Link href={`posts/[slug]`} as={`posts/${post.slug}`} prefetch={true}>
+                <li key={post.databaseId}>
+                    <Link href={`post/[slug]`} as={`post/${post.slug}`} prefetch={true}>
                         <a><PostTile post={post} size={index!=0 ? true : false}/></a> 
                     </Link>
                 </li>

@@ -1,30 +1,28 @@
-
-export const PostTile = (props) => {
-    const YM = props.post.published_at.split('-');
-    const D = YM[2].split('T');
-    const postDate = D[0]+"/"+YM[1]+"/"+YM[0];
+export const PostTile = ({post,size}) => {
+    const date = post.date.split('T')[0];
+    const thumbnail = post.featuredImage != null ? post.featuredImage.node.srcSet.split(', ')[3].split(' ')[0] : "https://images.pexels.com/photos/3657429/pexels-photo-3657429.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
     return(
         <>
         <div className="PostTitle">
             <div className="PostTitle__overlay">
-                <h2 className="PostTitle__title">{props.post.title}</h2>
+                <h2 className="PostTitle__title">{post.title}</h2>
                 <div className="PostTitle__author">
-                    <img className="PostTitle__author__img" src={props.post.authors[0].profile_image} alt="avatar"/>
+                    <img className="PostTitle__author__img" src={post.author.node.avatar.url} alt="avatar"/>
                     <div className="PostTitle__author__meta">
-                        <p className="PostTitle__author__meta__name">{props.post.authors[0].name}</p>
-                        <p className="PostTitle__author__meta__date">{postDate}</p>
+                        <p className="PostTitle__author__meta__name">{post.author.node.name}</p>
+                        <p className="PostTitle__author__meta__date">{date}</p>
                     </div>
                 </div>
             </div>
         </div>
         <style jsx>{`
                 .PostTitle {
-                    background-image: url('${props.post.feature_image}');
+                    background-image: url('${thumbnail}');
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
                     width: 100%;
-                    height: ${props.size ? '168px' : '320px'};
+                    height: ${size ? '168px' : '320px'};
                     border-radius: 6px;
                     filter: saturate(132%);
                     position: relative;
@@ -38,7 +36,7 @@ export const PostTile = (props) => {
                         padding: 28px;
                         display: flex;
                         flex-wrap: wrap;
-                        align-content: ${props.size ? 'space-between' : 'flex-end'};
+                        align-content: ${size ? 'space-between' : 'flex-end'};
                     }
                     &__title{
                         width: 100%;
@@ -48,7 +46,7 @@ export const PostTile = (props) => {
                         font-weight: 600;
                     }
                     &__author{
-                        margin-top: ${props.size ? '0px' : '16px'};
+                        margin-top: ${size ? '0px' : '16px'};
                         display: flex;
                         &__img{
                             width: 36px;

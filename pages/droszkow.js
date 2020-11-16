@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { getPosts } from './api/ghost';
 import { Header } from '../components/Header/Header';
 import { PostsList } from '../components/PostsList/PostsList';
 import { Contact } from '../components/Contact/Contact';
@@ -9,10 +8,15 @@ import {Church} from '../components/Church/Church';
 import {TownHall} from '../components/TownHall/TownHall'
 import {Bus} from '../components/Bus/Bus';
 import { MeetingInfo } from '../components/MeetingInfo/MeetingInfo';
+import { getAllPosts } from "../graphql/client";
 
-export async function getServerSideProps(){
-  const posts = await getPosts();
-  return {props: {posts: posts} }
+export async function getServerSideProps(context) {
+  const posts = await getAllPosts('Droszków');
+  return {
+    props: {
+      posts
+    },
+  };
 }
 
 export default function Droszkow(props) {
@@ -36,7 +40,7 @@ export default function Droszkow(props) {
         <meta property="og:title" content="Gmina Zabór Info" />
         <meta property="og:image" content={`https://gminazabor.info/hero/${town}.jpg`} />
       </Head>
-      <Header title="Aktualności" subtitle={town} img={`./hero/${town}.jpg`}/>
+      <Header title="Aktualności" subtitle={[{name: town}]} img={`./hero/${town}.jpg`}/>
       <main className={styles.main}>
         <PostsList posts={props.posts} weather={weather} town={town} amount={7}/>
         <Church/>
