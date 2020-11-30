@@ -14,7 +14,7 @@ export async function getServerSideProps(context) {
 
 
 const Post = ({post}) => {
-  const thumbnail = post.featuredImage != null ? post.featuredImage.node.srcSet.split(', ')[3].split(' ')[0] : "https://images.pexels.com/photos/3657429/pexels-photo-3657429.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
+  const thumbnail = post.featuredImage != null ? post.featuredImage.node.srcSet.split(', ')[3].split(' ')[0] : "/defaultPost.jpg";
   return (
     <>
     <Head>
