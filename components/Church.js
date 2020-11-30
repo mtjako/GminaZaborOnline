@@ -6,7 +6,7 @@ export const Church = (props) => {
         <>
         <div className="Church">
           <SectionHeader title="Kościół"/>
-          <Image quality={50} width={225} height={225} alt="church" className="Church__img" src="/church.svg"/>
+          <Image quality={50} width={250} height={250} alt="church" className="Church__img" src="/church.svg"/>
             <div className="Church__schedule">
               <h3>Msze Święte</h3>
               <b>Niedziela</b>
@@ -14,6 +14,7 @@ export const Church = (props) => {
               <p>09:30 - Jany</p>
               <p>11:00 - Droszków</p>
               <p>12:30 - Przytok</p>
+              <p>17:30 - Droszków</p>
               <br/>
               <b>Dni powszednie</b>
               <p>Jany - Wtorek 18:00</p>

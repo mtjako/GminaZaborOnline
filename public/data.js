@@ -29,7 +29,6 @@ export default[
         soltys:"Tomasz Kunc",
         rada:[
            "Agnieszka Georgiczuk",
-           "Bogusława Jackowska",
            "Ewa Kostrzewska",
            "Jakub Czwojda",
            "Jarosław Śliwiński",
