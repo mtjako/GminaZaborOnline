@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
 export const Weather = (props) => {
-    // console.log("propsy: ",props.weather);
     let weather = 'null';
     switch(props.weather.weather[0].main){
         case "Clouds": weather = "Chmury"; break;

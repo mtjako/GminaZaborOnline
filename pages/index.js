@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import { Header } from "../components/Header/Header";
-import { PostsList } from "../components/PostsList/PostsList";
+import { Header } from "../components/Header";
+import { PostsList } from "../components/PostsList";
 import { getAllPosts } from "../graphql/client";
 
 export async function getServerSideProps(context) {
@@ -48,7 +47,7 @@ export default function Home(props) {
 
   return (
     <>
-      <div className={styles.container} className="body">
+      <div className="body">
         <Head>
           <link rel="icon" href="/favicon.svg" />
           <meta property="og:url" content={`https://gminazabor.info/`} />
@@ -64,7 +63,7 @@ export default function Home(props) {
           subtitle={[{name: 'Gmina Zabór'}]}
           img={`/hero/${towns[random - 1]}.jpg`}
         />
-        <main className={styles.main}>
+        <main>
           <PostsList posts={props.posts} weather={weather} town="" amount={7} />
         </main>
       </div>

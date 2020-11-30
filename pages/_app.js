@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import { Navigation } from '../components/Navigation/Navigation';
+import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
 import {Helmet} from "react-helmet";
 import Head from 'next/head';
