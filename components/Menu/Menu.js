@@ -7,18 +7,18 @@ export const Menu = ({close,setClose}) => {
             <div className="Menu__top">
                 <p className="Menu__header"><span>W</span>ybierz Sołectwo</p>
                 <ul className="Menu__list">
-                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><a href={`/czarna`}>Czarna</a></li>
-                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><a href={`/dabrowa`}>Dąbrowa</a></li>
-                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><a href={`/droszkow`}>Droszków</a></li>
-                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><a href={`/laz`}>Łaz</a></li>
-                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><a href={`/milsko`}>Milsko</a></li>
-                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><a href={`/przytok`}>Przytok</a></li>
-                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><a href={`/tarnawa`}>Tarnawa</a></li>
-                    <li onClick={()=>setClose(!close)} className="Menu__list__item"><a href={`/zabor`}>Zabór</a></li>
+                <Link href={`/czarna`}><li onClick={()=>setClose(!close)} className="Menu__list__item">Czarna</li></Link>
+                <Link href={`/dabrowa`}><li onClick={()=>setClose(!close)} className="Menu__list__item">Dąbrowa</li></Link>
+                <Link href={`/droszkow`}><li onClick={()=>setClose(!close)} className="Menu__list__item">Droszków</li></Link>
+                <Link href={`/laz`}><li onClick={()=>setClose(!close)} className="Menu__list__item">Łaz</li></Link>
+                <Link href={`/milsko`}><li onClick={()=>setClose(!close)} className="Menu__list__item">Milsko</li></Link>
+                <Link href={`/przytok`}><li onClick={()=>setClose(!close)} className="Menu__list__item">Przytok</li></Link>
+                <Link href={`/tarnawa`}><li onClick={()=>setClose(!close)} className="Menu__list__item">Tarnawa</li></Link>
+                <Link href={`/zabor`}><li onClick={()=>setClose(!close)} className="Menu__list__item">Zabór</li></Link>
                 </ul>
             </div>
             <ul className="Menu__list">
-                <li onClick={()=>setClose(!close)} className="Menu__list__item"><Link href={`http://www.gminazabor.pl/`}><a>Urząd Gminy</a></Link></li>
+                <Link href={`http://www.gminazabor.pl/`}><li onClick={()=>setClose(!close)} className="Menu__list__item">Urząd Gminy</li></Link>
             </ul>
         </div>
         <style jsx>{`

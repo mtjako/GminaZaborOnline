@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { getPost } from "../../graphql/client";
 
 export async function getServerSideProps(context) {
-  console.log(context);
   const post = await getPost(context.params.slug[context.params.slug.length-1]);
   return {
     props: {
