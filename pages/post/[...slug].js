@@ -19,7 +19,7 @@ const Post = ({post}) => {
     <Head>
       <title>{post.title}</title>
       <link rel="icon" href="/favicon.svg" />
-      <meta property="og:url" content={`https://gminazabor.info/posts/${post.slug}`} />
+      <meta property="og:url" content={`https://gminazabor.info/post/${post.slug}`} />
       <meta property="og:type" content="article" />
       <meta property="og:title" content={post.title} />
       <meta property="og:image" content={thumbnail} />
